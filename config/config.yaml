@@ -42,21 +42,19 @@ options:
     priority: 5 # default global priority is 5 (assuming its 1-10)
 
 transformations:
-  FQDN->ALL:
-  FQDN->DNS:
-    ttl: 1440
-  IPAddress->ALL:
-  Netblock->ALL:
-  AutonomousSystem->ALL:
-  AutnumRecord->ALL:
-  IPNetRecord->ALL:
   ContactRecord->ALL:
-  Organization->ALL:
-  Location->ALL:
-  EmailAddress->ALL:
-  Phone->ALL:
-  Person->ALL:
   DomainRecord->ALL:
-  URL->ALL:
+  FQDN->FQDN:
+  FQDN->IPAddress:
+  Identifier->ALL:
+  IPAddress->FQDN:
+  IPAddress->Netblock:
+  IPAddress->ASN:
+  IPAddress->RIROrg:
+  Location->ALL:
+  Netblock->ALL:
+  Organization->ALL:
+  Person->ALL:
+  Phone->ALL:
   TLSCertificate->ALL:
-  Service->ALL:
+  URL->ALL:
